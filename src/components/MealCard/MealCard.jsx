@@ -10,16 +10,16 @@ export default function MealCard () {
     useEffect (() =>{
         axios.get(API).then((data) => setGetMeal(data.data.meals[0]));
     },[]);
-    function handleSearchOnChange(e) {
+    function handleSearchOn(e) {
         setInpValue(e.target.value);
-        handleSearch(e);
+        btnSearch(e);
     }
       
-      const handleSearch = async(e) =>{
+      const btnSearch = async(e) =>{
         e.preventDefault();
         try{
             let response = await axios
-            .get(API_SEARCH +{inpValue})
+            .get(API_SEARCH +inpValue)
             .then((data) =>{
                 setSearchMeal(data.data.meals);
           console.log(searchMeal);
@@ -35,10 +35,26 @@ export default function MealCard () {
         <section>
 
           <div className="card">
+            <div className="card_text">
             <h2>Meal of the day</h2>
-
-
+            <h3> {getMeal.strMeal}</h3>
+             <p>{getMeal.strCategory} | {getMeal.strArea} </p>
+            </div>
+            <div >
+              <img className ="card_image"src={getMeal.strMealThumb} alt="img" />
+            </div>
           </div>
+          <center>
+          <form className="search_input">
+          <h4>Find your Meal</h4>
+             <input type="text"
+             placeholder="Find your meal"
+             value={inpValue}
+             onChange={(e) => btnSearch(e)} />
+             <button>SEARCH</button>
+
+          </form>
+          </center>
         </section>
       )
     }

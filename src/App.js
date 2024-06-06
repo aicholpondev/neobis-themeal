@@ -8,6 +8,9 @@ import HeaderNav from "./components/HeaderNav/HeaderNav";
 function App() {
   return (
     <div className="App">
+      <HeaderNav/>
+      <MealCard/>
+      
      
     </div>
   );
