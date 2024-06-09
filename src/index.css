@@ -12,16 +12,24 @@
 .header-nav h1{
     text-align: center;
     color: white;
+    text-decoration-line: none;
+    font-weight: 700;
 }
 .card{
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-.card_image{
+.card_text-title{
+    text-decoration-line: none;
+}
+.card_text-title :hover{
+    text-decoration-line: underline;
+}
+img{
     margin-top: 4rem;
-    width: 30rem;
-    height: 30rem;
+    width: 20rem;
+    height: 20rem;
     border-radius: 1rem;
     box-shadow: 3px 3px 7px gray;
 }
@@ -61,8 +69,40 @@ h4{
     cursor: pointer;
     font-weight: 700;
     padding: 10px 25px;
-
+    margin-bottom: 5rem;
 }
+.meal-detail-general{
+    width: 100%;
+    height: 100vh;
+}
+.meal-detail-info{
+    display: flex;
+    justify-content: space-around;
+}
+.detail-instruction h3{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    color: black; 
+}
+.detail-instruction p{
+    width: 90%;
+    margin:  0 auto;
+}
+.detail-instruction a{
+    border: 2px solid red;
+    background: red;
+    color: white;
+    padding: 8px  15px;
+   text-align: center;
+   position: absolute;
+   right: 2rem;
+  margin: 20px 0 20px 0;
+   font-size: 20px;
+   text-decoration-line: none;
+   border-radius: 0.5rem;
+}
+
 
 
 

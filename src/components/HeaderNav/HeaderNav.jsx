@@ -1,11 +1,11 @@
 
 import React from "react";
-// import { Link } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const HeaderNav = () => {
   return (
     <div className="header-nav">
-    <h1>The Meal</h1>
+      <NavLink to="/"> <h1>The Meal</h1> </NavLink>
     </div>
   );
 };
