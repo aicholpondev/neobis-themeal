@@ -2,19 +2,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');body{
     background: whitesmoke;
-    font-family: "Merriweather", serif;
+    font-family: "Merriweather", sans-serif;
 
 }
 .header-nav{
     padding: 1rem 0;
-    background: hsl(39, 88%, 43%);
+    background: hsl(39, 88%, 43%);   
 }
 .header-nav h1{
     text-align: center;
-    color: white;
-    text-decoration-line: none;
     font-weight: 700;
+    text-decoration-line: none;
 }
+
 .card{
     display: flex;
     align-items: center;
@@ -73,7 +73,7 @@ h4{
 }
 .meal-detail-general{
     width: 100%;
-    height: 100vh;
+    padding: 0 0 40px 0;
 }
 .meal-detail-info{
     display: flex;
@@ -88,20 +88,48 @@ h4{
 .detail-instruction p{
     width: 90%;
     margin:  0 auto;
+    padding:  0 0 2rem 0;
 }
 .detail-instruction a{
     border: 2px solid red;
     background: red;
     color: white;
     padding: 8px  15px;
-   text-align: center;
-   position: absolute;
-   right: 2rem;
-  margin: 20px 0 20px 0;
+     margin:0 20px;
    font-size: 20px;
    text-decoration-line: none;
    border-radius: 0.5rem;
 }
+.detail-instruction a:hover{
+    border: 2px solid red;
+    color: red;
+    background: white;
+    transition: .3s;
+ 
+}
+@media (max-width: 980px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+    .meal-detail-info{
+        display: flex;
+        flex-direction: column;
+    }
+    .detail-text h3{
+        text-align: center;
+    }
+    .detail_img{
+        text-align: center;
+    }
+
+}
+@media(max-width:800px){
+    .card_text-title{
+        text-align: center;
+    }
+}   
+
 
 
 

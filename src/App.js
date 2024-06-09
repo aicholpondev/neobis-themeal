@@ -1,6 +1,6 @@
 
 
-// import "./App.css";
+
 import { Routes,Route } from "react-router-dom";
 import MealCard from "./components/MealCard/MealCard";
 import MealDetail from "./components/MealDetails/MealDetails";

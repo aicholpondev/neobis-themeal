@@ -13,23 +13,24 @@ export default function MealCard () {
     },[]);
     function mealSearchOn(e) {
         setInpValue(e.target.value);
-        btnSearch(e);
+        // btnSearch(e);
     };
       
       const btnSearch = async(e) =>{
         e.preventDefault();
         try{
-            let response = await axios
+            let data = await axios
             .get(API_SEARCH +inpValue)
             .then((data) =>{
-                setSearchMeal(response.data.meals);
+                setSearchMeal(data.data.meals);
           console.log(searchMeal);
             });
         }catch(error){
-            console.log("Error", error);
+            console.error("Error", error);
 
         }
       };
+   
       
       return (
         <section>
@@ -55,7 +56,7 @@ export default function MealCard () {
              placeholder="Find your meal"
              value={inpValue}
              onChange={(e) => mealSearchOn(e)} />
-             <button type="submit" onClick={btnSearch}>SEARCH</button>
+             <button type="submit">SEARCH</button>
 
           </form>
           </center>
@@ -81,6 +82,7 @@ export default function MealCard () {
 </section>
       )
     }
+
 
 
 
