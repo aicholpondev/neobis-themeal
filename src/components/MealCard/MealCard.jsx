@@ -30,8 +30,8 @@ export default function MealCard () {
 
         }
       };
-   
-      
+     
+       
       return (
         <section>
 
@@ -57,6 +57,7 @@ export default function MealCard () {
              value={inpValue}
              onChange={(e) => mealSearchOn(e)} />
              <button type="submit">SEARCH</button>
+             
 
           </form>
           </center>

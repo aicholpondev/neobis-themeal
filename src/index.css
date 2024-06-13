@@ -107,6 +107,9 @@ h4{
     transition: .3s;
  
 }
+.meal-details-img{
+    text-align: center;
+}
 @media (max-width: 980px) {
     .card {
         display: flex;

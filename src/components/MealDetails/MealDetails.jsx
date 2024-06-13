@@ -15,20 +15,16 @@ export default function MealDetails () {
   
 
   function getInfoMeals(getMeal) {
-    return Object.keys(getMeal)
-      .filter((key) => key.startsWith("strIngredient"))
-      .reduce((el, key, index) => {
-        const ingredient = getMeal[key];
-        const measure = getMeal["strMeasure" + (index + 1)];
-        if (ingredient) {
-          el.push(
-            <p key={index}>
-              {ingredient} <b>{measure}</b>
-            </p>
-          );
-        }
-        return el;
-      }, []);
+    let res = [];
+   getMeal.forEach( i => {
+    let ingredient = getMeal["strIngredient" + i];
+    let measure = getMeal["strMeasure" + i];
+             if (ingredient != "") {
+        res.push({ ingredient, measure });
+      }
+       
+   });
+
   }
 
   return (
