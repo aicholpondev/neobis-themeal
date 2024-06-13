@@ -14,18 +14,35 @@ export default function MealDetails () {
 
   
 
+  // function getInfoMeals(getMeal) {
+  //   let res = [];
+  //  getMeal.forEach( i => {
+  //   let ingredient = getMeal["strIngredient" + i];
+  //   let measure = getMeal["strMeasure" + i];
+  //            if (ingredient != "") {
+  //       res.push({ ingredient, measure });
+  //     }
+       
+  //  });
+
+  // }
   function getInfoMeals(getMeal) {
     let res = [];
-   getMeal.forEach( i => {
-    let ingredient = getMeal["strIngredient" + i];
-    let measure = getMeal["strMeasure" + i];
-             if (ingredient != "") {
+    for (let i = 1; i <= 20; i++) {
+      let ingredient = getMeal["strIngredient" + i];
+      let measure = getMeal["strMeasure" + i];
+      if (ingredient != "") {
         res.push({ ingredient, measure });
       }
-       
-   });
+    }
+  
+  return res.map((item) => (
+    <p>
+      {item.ingredient} <b>{item.measure}</b>
+    </p>
+  ));
+}
 
-  }
 
   return (
   <div className="meal-detail-general">
